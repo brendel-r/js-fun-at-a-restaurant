@@ -2,27 +2,45 @@ function nameMenuItem(name) {
   return `Delicious ${name}`;
 }
 
-// make function
-// create an object menu item
-
-
 function createMenuItem(foodItem, itemPrice, foodType) {
-  var item = {
+  var menuItem = {
     name: foodItem,
     price: itemPrice,
     type: foodType
   }
-  return item
+  return menuItem
 }
+
+function addIngredients(ingredient, array) {
+  if (!array.includes(ingredient)) {
+  array.push(ingredient)
+  }
+}
+
+function formatPrice(price) {
+ return `$${price}`
+}
+
+function decreasePrice(price) {
+ return price - (price * .1)
+}
+
+function createRecipe(title, ingredients, menuItemType) {
+  var recipe = {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType,
+  }
+return recipe
+}
+
 
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
-  // formatPrice,
-  // decreasePrice,
-  // createRecipe
+  addIngredients,
+  formatPrice,
+  decreasePrice,
+  createRecipe
 }
-
-
