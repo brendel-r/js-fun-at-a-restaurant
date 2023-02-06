@@ -16,7 +16,7 @@ function refundOrder(orderToRefund, deliveryOrders) {
 
 function listItems(deliveryOrders) {
   var items = []
-  for(i= 0; i < deliveryOrders.length; i++) {
+  for (i = 0; i < deliveryOrders.length; i++) {
   items.push(deliveryOrders[i].item)
   } 
 return items.join(', ')                 
